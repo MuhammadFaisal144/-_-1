@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style type="text/css">
+       #container {
+            width: 1350px;
+            height: 2500px;
+            background-color: rgb(26, 71, 110);
+            border: 3px solid black;
+            border-radius: 15px;
+       }
+       #nav-bar {
+            background-color: darkgrey;
+            width: 1080px;
+            height: 100px;
+            position: relative;
+            left: 120px;
+            top: 20px;
+            border: 3px solid black;
+            border-radius: 15px;
+        }
+       #items {
+            font-size: 20px;
+            float: left;
+            margin: 40px 40px 20px 20px;
+            position: relative;
+            left: 350px;
+       }
+       #items:hover {
+            color: lightblue;
+       }
+       img {
+            width: 64px;
+            height: 64px;
+            position: relative;
+            right: 450px;
+            top: 18px;
+            border-color: black;
+            border: 4px solid black;
+            border-radius: 50%;
+            object-fit: cover;
+       }
+       #text {
+            font-family: 'Arial', sans-serif; 
+            font-size: 18px; 
+            color: white; 
+            line-height: 1.6; 
+            text-align: justify; 
+            padding: 20px 40px; 
+            margin-top: 60px; 
+            margin-left: 120px;
+            margin-right: 150px;
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+       }
+       #text-head {
+            font-size: 30px;
+       }
+       #about {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+            text-align: justify;
+            padding: 20px 40px;
+            margin-top: 60px;
+            margin-left: 120px;
+            margin-right: 150px;
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       }
+       #o-skills {
+            font-family: 'Arial', sans-serif; 
+            font-size: 18px; 
+            color: white; 
+            line-height: 1.6; 
+            text-align: justify; 
+            padding: 20px 40px; 
+            margin-top: 60px; 
+            margin-left: 120px;
+            margin-right: 150px;
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+            list-style: none;
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 20px; 
+       }
+       #o-skills li {
+            width: calc(33.333% - 20px);
+            padding: 10px 0;
+            position: relative;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+            box-sizing: border-box;
+       }
+       #o-skills li:before {
+            content: "✓";
+            color: lightblue;
+            font-size: 20px;
+            position: absolute;
+            left: -30px;
+            top: 5px;
+       }
+       #o-skills li:hover {
+            color: lightblue;
+            transform: scale(1.05);
+       }
+       #extra {
+            font-size: 30px;
+       }
+       #contact {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+            text-align: justify;
+            padding: 20px 40px;
+            margin-top: 60px;
+            margin-left: 120px;
+            margin-right: 150px;
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       }
+       #link {
+            color: white;
+       }
+       #s-contact {
+            font-size: 30px;
+       }
+       #portfolio {
+            font-family: 'Arial', sans-serif;
+            font-size: 50px;
+            color: white;
+            line-height: 1.6;
+            background-color: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       }
+       #resume {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+            padding: 20px 40px;
+            text-align: justify;
+            margin-top: 60px;
+            margin-left: 120px;
+            margin-right: 150px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       }
+       #resume-head {
+            font-size: 30px;
+       }
+       #project {
+            font-family: 'Arial', sans-serif;
+            font-size: 18px;
+            color: white;
+            line-height: 1.6;
+            padding: 20px 40px;
+            text-align: justify;
+            margin-top: 60px;
+            margin-left: 120px;
+            margin-right: 150px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+       }
+       #project-head {
+            font-size: 30px;
+       }
+       #Languages {
+            font-size: 21px;
+       }
+       #langs {
+            list-style-type: none;
+            padding-left: 0px;
+       }
+       #langs li {
+            width: calc(33.333% - 20px); 
+            padding: 10px 0;
+            position: relative;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+            box-sizing: border-box;
+       }
+       #langs li:before {
+            content: "✓";
+            color: lightblue;
+            font-size: 20px;
+            position: absolute;
+            left: -30px;
+            top: 5px;
+       }
+       #langs li:hover {
+            color: lightblue;
+            transform: scale(1.05);
+       }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="portfolio"><center><b>Portfolio Website</b></center></div>
+        <div id="nav-bar">
+            <a href="#text" id="items">Home</a> 
+            <a href="#o-skills" id="items">Skills</a>
+            <a href="#project" id="items">Projects</a>
+            <a href="#extra" id="items">About</a>  
+            <a href="#contact" id="items">Contact</a> 
+            <img src="WhatsApp Image 2023-03-02 at 21.58.39.jpg" alt="">
+        </div>
+        <div id="resume">
+            <span id="resume-head"><b>Resume</b></span><br>
+            Name: Muhammad Faisal <br>
+            Degree: Information Technology <br>
+            University: Government College University, Faisalabad
+        </div>
+        <div id="text">
+            <span id="text-head"><b>Summary</b></span><br>
+            I am a dedicated and passionate IT student at Government College University, Faisalabad, currently pursuing a Bachelor of Science in Information Technology. With over a year of hands-on experience as a PHP developer, I have honed my skills in web development, specializing in HTML, CSS, JavaScript, jQuery, and Ajax. I have successfully completed various projects, leveraging tools like Visual Studio Code, Apache, XAMPP, and Google Chrome. My academic journey, complemented by practical experience in PHP, C++, C#, and MySQL, reflects my commitment to continuous learning and growth in the dynamic field of technology. I am eager to contribute my knowledge and expertise to new challenges and opportunities in the tech industry.
+        </div>
+        <ol id="o-skills">
+            <li id="Skills">HTML</li>
+            <li id="Skills">CSS</li>
+            <li id="Skills">JavaScript</li>
+            <li id="Skills">PHP</li>
+            <li id="Skills">jQuery</li>
+            <li id="Skills">Ajax</li>
+            <li id="Skills">C++</li>
+            <li id="Skills">C#</li>
+            <li id="Skills">MySQL</li> 
+            <li id="Skills">Apache Server</li>
+            <li id="Skills">Xampp</li>
+        </ol>
+        <div id="project">
+            <span id="project-head"><b>Project</b></span><br>
+            <span id="Languages"><b>Hostel Management web-based Project</b></span><br>
+            My Hostel Management project is a web-based application that I developed using HTML, CSS, and PHP. The goal of the project was to make hostel management more efficient and organized.
+
+            I designed the interface to be user-friendly, so both administrators and students can navigate the system easily. The project handles dynamic content through PHP, which means it can manage user authentication, student registration, room allocation, and fee management without any hassle.
+
+            For data management, I implemented a database system that keeps all records organized and easily accessible. I also added some basic security measures to ensure that user data is protected, like secure login forms and data validation.
+
+            Overall, this project reflects my skills in web development and my ability to create practical solutions for real-world challenges.
+            <br><br>
+            <b>Languages used:</b><br>
+            <ul id="langs">
+                <li id="langs-list">HTML</li>
+                <li id="langs-list">CSS</li>
+                <li id="langs-list">PHP</li>
+            </ul>
+        </div>
+        <div id="about">
+            <span id="extra"><b>About</b></span><br>
+            Welcome to my online portfolio, a curated space where creativity meets technology. This website serves as a showcase of my work, reflecting my passion for web development and design. Here, you'll find a collection of projects that highlight my skills, attention to detail, and dedication to creating engaging and functional web experiences.
+
+            Whether you're here to explore my latest work, learn more about my background, or get in touch, I hope you find this website both informative and inspiring. My goal is to provide a seamless browsing experience, allowing you to easily navigate through my portfolio and discover the various aspects of my professional journey.
+
+            Thank you for visiting, and I look forward to sharing more of my work with you.
+        </div>
+        <div id="contact">
+            <span id="s-contact"><b>Contact</b></span><br>
+            Phone: +923478654100<br>
+            Email: muhammadfaisal3896@gmail.com<br>
+            <a href="https://web.facebook.com/adonis.faisal.376/" id="link">Facebook: adonisfaisal</a>
+        </div>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.onload = function() {
+            const hour = new Date().getHours();
+            let greeting;
+            if (hour < 12) {
+                greeting = "Good Morning!";
+            } else if (hour < 18) {
+                greeting = "Good Afternoon!";
+            } else {
+                greeting = "Good Evening!";
+            }
+            alert(greeting);
+        };
+    </script>
+</body>
+</html>
